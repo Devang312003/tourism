@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+    color: #333;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    font-size: 24px;
+    color: #ffbb33;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar ul li:hover {
+    transform: scale(1.05);
+  }
+  
+  .sidebar ul li img {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .sidebar ul li span {
+    font-size: 16px;
+    color: #ffbb33;
+    text-align: center;
+  }
+  
+  /* Main Booking Section Styling */
+  .booking-main {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .booking-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-section h1 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .booking-section p {
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input, 
+  .form-group select, 
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: border 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #ffbb33;
+    outline: none;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffbb33;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Modal Styling */
+  .modal {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal img {
+    max-width: 220px;
+    max-height: 160px;
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Travel Booking</title>
+  <link rel="stylesheet" href="styless.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar for Destination Previews -->
+  <aside class="sidebar">
+    <h2>Top Destinations</h2>
+    <ul>
+      <li onclick="openModal(event, 'images/destination-1.jpg')">
+        <img src="images/destination-1.jpg" alt="Varanasi">
+        <span>Varanasi</span>
+      </li>
+      <li onclick="openModal(event, 'images/destination-2.jpg')">
+        <img src="images/destination-2.jpg" alt="Goa">
+        <span>Goa</span>
+      </li>
+      <li onclick="openModal(event, 'images/destination-3.jpg')">
+        <img src="images/destination-3.jpg" alt="Mussoorie">
+        <span>Mussoorie</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Booking Form Section -->
+  <main class="booking-main">
+    <section class="booking-section">
+      <h1>Start Your Journey</h1>
+      <p>Explore luxury destinations and exclusive packages.</p>
+
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="from"><i class="fas fa-plane-departure"></i> Departure City</label>
+          <input type="text" id="from" placeholder="Enter departure city" required>
+        </div>
+        <div class="form-group">
+          <label for="destination"><i class="fas fa-map-marker-alt"></i> Destination</label>
+          <input type="text" id="destination" placeholder="Enter destination" required>
+        </div>
+        <div class="form-group">
+          <label for="departure-date"><i class="fas fa-calendar-alt"></i> Departure Date</label>
+          <input type="date" id="departure-date" required>
+        </div>
+        <div class="form-group">
+          <label for="return-date"><i class="fas fa-calendar-alt"></i> Return Date</label>
+          <input type="date" id="return-date" required>
+        </div>
+        <div class="form-group">
+          <label for="accommodation"><i class="fas fa-bed"></i> Accommodation Type</label>
+          <select id="accommodation" required>
+            <option value="luxury">Luxury</option>
+            <option value="standard">Standard</option>
+            <option value="budget">Budget</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="guests"><i class="fas fa-users"></i> Guests</label>
+          <input type="number" id="guests" placeholder="1" required min="1">
+        </div>
+        <div class="form-group">
+          <label for="requests"><i class="fas fa-comments"></i> Special Requests</label>
+          <textarea id="requests" rows="4" placeholder="Enter any special requests"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Book Now</button>
+      </form>
+    </section>
+  </main>
+  <form class="booking-form" action="process_booking.php" method="post">
+    <!-- Your form fields here -->
+</form>
+
+  <!-- Modal for Enlarged Image -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-image" src="" alt="Enlarged Destination">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
